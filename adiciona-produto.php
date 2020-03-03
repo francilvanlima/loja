@@ -13,7 +13,7 @@ $conexao = mysqli_connect('localhost', 'root', '', 'loja');
 if (insereProduto($conexao, $nome, $preco)) { ?>
 	<p class="text-success">Produto <?= $nome; ?>, <?= $preco; ?> reais adicionado com sucesso!</p>
 	<?php } else { ?>
-	<p class="text-danger">Produto Oficial <?= $nome;?> não foi adicionado!</p>
+	<p class="text-danger">Produto<?= $nome;?> não foi adicionado!</p>
 	<?php
 }
 ?>
