@@ -8,7 +8,12 @@ function listaProduto ($conexao){
     return $produtos;
 }
 
-function insereProduto($conexao, $nome, $preco){
-	$query = "INSERT INTO produtos (nome, preco) VALUES ('{$nome}', {$preco})";
+function insereProduto($conexao, $nome, $preco, $descricao){
+	$query = "INSERT INTO produtos (nome, preco) VALUES ('{$nome}', {$preco}. '{$descricao}')";
 	return mysqli_query($conexao, $query);
 } 
+
+function removeProduto($conexao, $id) {
+    $query = "delete from produtos where id = {$id}";
+    return mysqli_query($conexao, $query);
+}
